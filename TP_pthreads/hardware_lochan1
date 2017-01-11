@@ -1,0 +1,989 @@
+lochan1
+    description: Computer
+    bits: 64 bits
+    fonctionnalités: vsyscall32
+  *-core
+       description: Motherboard
+       identifiant matériel: 0
+     *-memory
+          description: Mémoire système
+          identifiant matériel: 0
+          taille: 31GiB
+     *-cpu:0
+          produit: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+          fabriquant: Intel Corp.
+          identifiant matériel: 1
+          information bus: cpu@0
+          taille: 2394MHz
+          capacité: 2394MHz
+          bits: 64 bits
+          fonctionnalités: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp x86-64 constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 popcnt aes lahf_lm ida arat epb dtherm tpr_shadow vnmi flexpriority ept vpid cpufreq
+     *-cpu:1
+          produit: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+          fabriquant: Intel Corp.
+          identifiant matériel: 2
+          information bus: cpu@1
+          taille: 1596MHz
+          capacité: 1596MHz
+          bits: 64 bits
+          fonctionnalités: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp x86-64 constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 popcnt aes lahf_lm ida arat epb dtherm tpr_shadow vnmi flexpriority ept vpid cpufreq
+     *-pci:0
+          description: Host bridge
+          produit: 5520 I/O Hub to ESI Port
+          fabriquant: Intel Corporation
+          identifiant matériel: 100
+          information bus: pci@0000:00:00.0
+          version: 13
+          bits: 32 bits
+          horloge: 33MHz
+        *-pci:0
+             description: PCI bridge
+             produit: 5520/5500/X58 I/O Hub PCI Express Root Port 1
+             fabriquant: Intel Corporation
+             identifiant matériel: 1
+             information bus: pci@0000:00:01.0
+             version: 13
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: pci normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             ressources: irq:0
+        *-pci:1
+             description: PCI bridge
+             produit: 5520/5500/X58 I/O Hub PCI Express Root Port 3
+             fabriquant: Intel Corporation
+             identifiant matériel: 3
+             information bus: pci@0000:00:03.0
+             version: 13
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: pci normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             ressources: irq:0 portE/S:c000(taille=4096) mémoire:dc000000-deffffff portE/S:d8000000(taille=67108864)
+           *-display
+                description: VGA compatible controller
+                produit: G98 [Quadro NVS 295]
+                fabriquant: NVIDIA Corporation
+                identifiant matériel: 0
+                information bus: pci@0000:0f:00.0
+                version: a1
+                bits: 64 bits
+                horloge: 33MHz
+                fonctionnalités: vga_controller bus_master cap_list rom
+                configuration: driver=nvidia latency=0
+                ressources: irq:24 mémoire:de000000-deffffff mémoire:d8000000-dbffffff mémoire:dc000000-ddffffff portE/S:c000(taille=128)
+        *-pci:2
+             description: PCI bridge
+             produit: 5520/5500/X58 I/O Hub PCI Express Root Port 7
+             fabriquant: Intel Corporation
+             identifiant matériel: 7
+             information bus: pci@0000:00:07.0
+             version: 13
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: pci normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             ressources: irq:0
+        *-generic:0 NON-RÉCLAMÉ
+             description: PIC
+             produit: 7500/5520/5500/X58 Physical and Link Layer Registers Port 0
+             fabriquant: Intel Corporation
+             identifiant matériel: 10
+             information bus: pci@0000:00:10.0
+             version: 13
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: 8259 cap_list
+             configuration: latency=0
+        *-generic:1 NON-RÉCLAMÉ
+             description: PIC
+             produit: 7500/5520/5500/X58 Routing and Protocol Layer Registers Port 0
+             fabriquant: Intel Corporation
+             identifiant matériel: 10.1
+             information bus: pci@0000:00:10.1
+             version: 13
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: 8259
+             configuration: latency=0
+        *-generic:2 NON-RÉCLAMÉ
+             description: PIC
+             produit: 7500/5520/5500 Physical and Link Layer Registers Port 1
+             fabriquant: Intel Corporation
+             identifiant matériel: 11
+             information bus: pci@0000:00:11.0
+             version: 13
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: 8259 cap_list
+             configuration: latency=0
+        *-generic:3 NON-RÉCLAMÉ
+             description: PIC
+             produit: 7500/5520/5500 Routing & Protocol Layer Register Port 1
+             fabriquant: Intel Corporation
+             identifiant matériel: 11.1
+             information bus: pci@0000:00:11.1
+             version: 13
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: 8259
+             configuration: latency=0
+        *-generic:4
+             description: PIC
+             produit: 7500/5520/5500/X58 I/O Hub System Management Registers
+             fabriquant: Intel Corporation
+             identifiant matériel: 14
+             information bus: pci@0000:00:14.0
+             version: 13
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: 8259 cap_list
+             configuration: driver=i7core_edac latency=0
+             ressources: irq:0
+        *-generic:5 NON-RÉCLAMÉ
+             description: PIC
+             produit: 7500/5520/5500/X58 I/O Hub GPIO and Scratch Pad Registers
+             fabriquant: Intel Corporation
+             identifiant matériel: 14.1
+             information bus: pci@0000:00:14.1
+             version: 13
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: 8259 cap_list
+             configuration: latency=0
+        *-generic:6 NON-RÉCLAMÉ
+             description: PIC
+             produit: 7500/5520/5500/X58 I/O Hub Control Status and RAS Registers
+             fabriquant: Intel Corporation
+             identifiant matériel: 14.2
+             information bus: pci@0000:00:14.2
+             version: 13
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: 8259 cap_list
+             configuration: latency=0
+        *-generic:7 NON-RÉCLAMÉ
+             description: PIC
+             produit: 7500/5520/5500/X58 Trusted Execution Technology Registers
+             fabriquant: Intel Corporation
+             identifiant matériel: 15
+             information bus: pci@0000:00:15.0
+             version: 13
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: io_x_-apic
+             configuration: latency=0
+        *-usb:0
+             description: USB controller
+             produit: 82801JI (ICH10 Family) USB UHCI Controller #4
+             fabriquant: Intel Corporation
+             identifiant matériel: 1a
+             information bus: pci@0000:00:1a.0
+             version: 00
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: uhci bus_master cap_list
+             configuration: driver=uhci_hcd latency=0
+             ressources: irq:20 portE/S:b000(taille=32)
+        *-usb:1
+             description: USB controller
+             produit: 82801JI (ICH10 Family) USB UHCI Controller #5
+             fabriquant: Intel Corporation
+             identifiant matériel: 1a.1
+             information bus: pci@0000:00:1a.1
+             version: 00
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: uhci bus_master cap_list
+             configuration: driver=uhci_hcd latency=0
+             ressources: irq:21 portE/S:b020(taille=32)
+        *-usb:2
+             description: USB controller
+             produit: 82801JI (ICH10 Family) USB UHCI Controller #6
+             fabriquant: Intel Corporation
+             identifiant matériel: 1a.2
+             information bus: pci@0000:00:1a.2
+             version: 00
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: uhci bus_master cap_list
+             configuration: driver=uhci_hcd latency=0
+             ressources: irq:22 portE/S:b040(taille=32)
+        *-usb:3
+             description: USB controller
+             produit: 82801JI (ICH10 Family) USB2 EHCI Controller #2
+             fabriquant: Intel Corporation
+             identifiant matériel: 1a.7
+             information bus: pci@0000:00:1a.7
+             version: 00
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: ehci bus_master cap_list
+             configuration: driver=ehci_hcd latency=0
+             ressources: irq:22 mémoire:df304800-df304bff
+        *-multimedia
+             description: Audio device
+             produit: 82801JI (ICH10 Family) HD Audio Controller
+             fabriquant: Intel Corporation
+             identifiant matériel: 1b
+             information bus: pci@0000:00:1b.0
+             version: 00
+             bits: 64 bits
+             horloge: 33MHz
+             fonctionnalités: bus_master cap_list
+             configuration: driver=snd_hda_intel latency=0
+             ressources: irq:92 mémoire:df300000-df303fff
+        *-pci:3
+             description: PCI bridge
+             produit: 82801JI (ICH10 Family) PCI Express Root Port 1
+             fabriquant: Intel Corporation
+             identifiant matériel: 1c
+             information bus: pci@0000:00:1c.0
+             version: 00
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: pci normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             ressources: irq:88 portE/S:3000(taille=4096) mémoire:df800000-df9fffff portE/S:dfa00000(taille=2097152)
+        *-pci:4
+             description: PCI bridge
+             produit: 82801JI (ICH10 Family) PCI Express Root Port 5
+             fabriquant: Intel Corporation
+             identifiant matériel: 1c.4
+             information bus: pci@0000:00:1c.4
+             version: 00
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: pci normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             ressources: irq:89 portE/S:2000(taille=4096) mémoire:df100000-df1fffff portE/S:df600000(taille=2097152)
+           *-network
+                description: Ethernet interface
+                produit: NetXtreme BCM5764M Gigabit Ethernet PCIe
+                fabriquant: Broadcom Corporation
+                identifiant matériel: 0
+                information bus: pci@0000:02:00.0
+                nom logique: eth48
+                version: 10
+                numéro de série: 2c:27:d7:f0:0c:45
+                capacité: 1Gbit/s
+                bits: 64 bits
+                horloge: 33MHz
+                fonctionnalités: bus_master cap_list ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd 1000bt 1000bt-fd autonegotiation
+                configuration: autonegotiation=on broadcast=yes driver=tg3 driverversion=3.121 firmware=5764m-v3.35 latency=0 multicast=yes port=twisted pair
+                ressources: irq:93 mémoire:df100000-df10ffff
+        *-pci:5
+             description: PCI bridge
+             produit: 82801JI (ICH10 Family) PCI Express Root Port 6
+             fabriquant: Intel Corporation
+             identifiant matériel: 1c.5
+             information bus: pci@0000:00:1c.5
+             version: 00
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: pci normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             ressources: irq:90 portE/S:1000(taille=4096) mémoire:df200000-df2fffff portE/S:df400000(taille=2097152)
+           *-network
+                description: Ethernet interface
+                produit: NetXtreme BCM5764M Gigabit Ethernet PCIe
+                fabriquant: Broadcom Corporation
+                identifiant matériel: 0
+                information bus: pci@0000:01:00.0
+                nom logique: eth49
+                version: 10
+                numéro de série: 2c:27:d7:f0:0c:44
+                taille: 1Gbit/s
+                capacité: 1Gbit/s
+                bits: 64 bits
+                horloge: 33MHz
+                fonctionnalités: bus_master cap_list ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd 1000bt 1000bt-fd autonegotiation
+                configuration: autonegotiation=on broadcast=yes driver=tg3 driverversion=3.121 duplex=full firmware=5764m-v3.35 ip=148.60.216.49 latency=0 multicast=yes port=twisted pair speed=1Gbit/s
+                ressources: irq:94 mémoire:df200000-df20ffff
+        *-usb:4
+             description: USB controller
+             produit: 82801JI (ICH10 Family) USB UHCI Controller #1
+             fabriquant: Intel Corporation
+             identifiant matériel: 1d
+             information bus: pci@0000:00:1d.0
+             version: 00
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: uhci bus_master cap_list
+             configuration: driver=uhci_hcd latency=0
+             ressources: irq:20 portE/S:b060(taille=32)
+        *-usb:5
+             description: USB controller
+             produit: 82801JI (ICH10 Family) USB UHCI Controller #2
+             fabriquant: Intel Corporation
+             identifiant matériel: 1d.1
+             information bus: pci@0000:00:1d.1
+             version: 00
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: uhci bus_master cap_list
+             configuration: driver=uhci_hcd latency=0
+             ressources: irq:21 portE/S:b080(taille=32)
+        *-usb:6
+             description: USB controller
+             produit: 82801JI (ICH10 Family) USB UHCI Controller #3
+             fabriquant: Intel Corporation
+             identifiant matériel: 1d.2
+             information bus: pci@0000:00:1d.2
+             version: 00
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: uhci bus_master cap_list
+             configuration: driver=uhci_hcd latency=0
+             ressources: irq:22 portE/S:b0a0(taille=32)
+        *-usb:7
+             description: USB controller
+             produit: 82801JI (ICH10 Family) USB2 EHCI Controller #1
+             fabriquant: Intel Corporation
+             identifiant matériel: 1d.7
+             information bus: pci@0000:00:1d.7
+             version: 00
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: ehci bus_master cap_list
+             configuration: driver=ehci_hcd latency=0
+             ressources: irq:20 mémoire:df304c00-df304fff
+        *-pci:6
+             description: PCI bridge
+             produit: 82801 PCI Bridge
+             fabriquant: Intel Corporation
+             identifiant matériel: 1e
+             information bus: pci@0000:00:1e.0
+             version: 90
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: pci subtractive_decode bus_master cap_list
+             ressources: mémoire:df000000-df0fffff
+           *-firewire
+                description: FireWire (IEEE 1394)
+                produit: FW322/323 [TrueFire] 1394a Controller
+                fabriquant: LSI Corporation
+                identifiant matériel: 9
+                information bus: pci@0000:37:09.0
+                version: 70
+                bits: 32 bits
+                horloge: 33MHz
+                fonctionnalités: ohci bus_master cap_list
+                configuration: driver=firewire_ohci latency=32 maxlatency=24 mingnt=12
+                ressources: irq:23 mémoire:df000000-df000fff
+        *-isa
+             description: ISA bridge
+             produit: 82801JIR (ICH10R) LPC Interface Controller
+             fabriquant: Intel Corporation
+             identifiant matériel: 1f
+             information bus: pci@0000:00:1f.0
+             version: 00
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: isa bus_master cap_list
+             configuration: latency=0
+        *-storage
+             description: RAID bus controller
+             produit: 82801 SATA Controller [RAID mode]
+             fabriquant: Intel Corporation
+             identifiant matériel: 1f.2
+             information bus: pci@0000:00:1f.2
+             version: 00
+             bits: 32 bits
+             horloge: 66MHz
+             fonctionnalités: storage bus_master cap_list
+             configuration: driver=ahci latency=0
+             ressources: irq:91 portE/S:b100(taille=8) portE/S:b110(taille=4) portE/S:b108(taille=8) portE/S:b114(taille=4) portE/S:b0c0(taille=32) mémoire:df304000-df3047ff
+     *-pci:1
+          description: PCI bridge
+          produit: 5520/5500/X58 I/O Hub PCI Express Root Port 3
+          fabriquant: Intel Corporation
+          identifiant matériel: 3
+          information bus: pci@0000:40:03.0
+          version: 13
+          bits: 32 bits
+          horloge: 33MHz
+          fonctionnalités: pci normal_decode bus_master cap_list
+          configuration: driver=pcieport
+          ressources: irq:0 portE/S:e000(taille=4096) mémoire:ea000000-eb0fffff portE/S:e0000000(taille=167772160)
+        *-display
+             description: VGA compatible controller
+             produit: GF110 [GeForce GTX 580]
+             fabriquant: NVIDIA Corporation
+             identifiant matériel: 0
+             information bus: pci@0000:42:00.0
+             version: a1
+             bits: 64 bits
+             horloge: 33MHz
+             fonctionnalités: vga_controller bus_master cap_list rom
+             configuration: driver=nvidia latency=0
+             ressources: irq:48 mémoire:ea000000-eaffffff mémoire:e0000000-e7ffffff mémoire:e8000000-e9ffffff portE/S:e000(taille=128) mémoire:eb080000-eb0fffff
+        *-multimedia
+             description: Audio device
+             produit: GF110 High Definition Audio Controller
+             fabriquant: NVIDIA Corporation
+             identifiant matériel: 0.1
+             information bus: pci@0000:42:00.1
+             version: a1
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: bus_master cap_list
+             configuration: driver=snd_hda_intel latency=0
+             ressources: irq:58 mémoire:eb000000-eb003fff
+     *-pci:2
+          description: PCI bridge
+          produit: 5520/5500/X58 I/O Hub PCI Express Root Port 7
+          fabriquant: Intel Corporation
+          identifiant matériel: 7
+          information bus: pci@0000:40:07.0
+          version: 13
+          bits: 32 bits
+          horloge: 33MHz
+          fonctionnalités: pci normal_decode bus_master cap_list
+          configuration: driver=pcieport
+          ressources: irq:0
+     *-pci:3
+          description: PCI bridge
+          produit: 7500/5520/5500/X58 I/O Hub PCI Express Root Port 9
+          fabriquant: Intel Corporation
+          identifiant matériel: 9
+          information bus: pci@0000:40:09.0
+          version: 13
+          bits: 32 bits
+          horloge: 33MHz
+          fonctionnalités: pci normal_decode bus_master cap_list
+          configuration: driver=pcieport
+          ressources: irq:0 portE/S:d000(taille=4096) mémoire:eb100000-eb1fffff portE/S:eb400000(taille=2097152)
+        *-scsi
+             description: SCSI storage controller
+             produit: SAS1068E PCI-Express Fusion-MPT SAS
+             fabriquant: LSI Logic / Symbios Logic
+             identifiant matériel: 0
+             information bus: pci@0000:41:00.0
+             nom logique: scsi6
+             version: 08
+             bits: 64 bits
+             horloge: 33MHz
+             fonctionnalités: scsi bus_master cap_list rom scsi-host
+             configuration: driver=mptsas latency=0
+             ressources: irq:56 portE/S:d000(taille=256) mémoire:eb110000-eb113fff mémoire:eb100000-eb10ffff mémoire:eb400000-eb5fffff
+     *-generic:0 NON-RÉCLAMÉ
+          description: PIC
+          produit: 7500/5520/5500/X58 Physical and Link Layer Registers Port 0
+          fabriquant: Intel Corporation
+          identifiant matériel: 10
+          information bus: pci@0000:40:10.0
+          version: 13
+          bits: 32 bits
+          horloge: 33MHz
+          fonctionnalités: 8259 cap_list
+          configuration: latency=0
+     *-generic:1 NON-RÉCLAMÉ
+          description: PIC
+          produit: 7500/5520/5500/X58 Routing and Protocol Layer Registers Port 0
+          fabriquant: Intel Corporation
+          identifiant matériel: 10.1
+          information bus: pci@0000:40:10.1
+          version: 13
+          bits: 32 bits
+          horloge: 33MHz
+          fonctionnalités: 8259
+          configuration: latency=0
+     *-generic:2 NON-RÉCLAMÉ
+          description: PIC
+          produit: 7500/5520/5500 Physical and Link Layer Registers Port 1
+          fabriquant: Intel Corporation
+          identifiant matériel: 11
+          information bus: pci@0000:40:11.0
+          version: 13
+          bits: 32 bits
+          horloge: 33MHz
+          fonctionnalités: 8259 cap_list
+          configuration: latency=0
+     *-generic:3 NON-RÉCLAMÉ
+          description: PIC
+          produit: 7500/5520/5500 Routing & Protocol Layer Register Port 1
+          fabriquant: Intel Corporation
+          identifiant matériel: 11.1
+          information bus: pci@0000:40:11.1
+          version: 13
+          bits: 32 bits
+          horloge: 33MHz
+          fonctionnalités: 8259
+          configuration: latency=0
+     *-generic:4 NON-RÉCLAMÉ
+          description: PIC
+          produit: 7500/5520/5500/X58 I/O Hub System Management Registers
+          fabriquant: Intel Corporation
+          identifiant matériel: 14
+          information bus: pci@0000:40:14.0
+          version: 13
+          bits: 32 bits
+          horloge: 33MHz
+          fonctionnalités: 8259 cap_list
+          configuration: latency=0
+     *-generic:5 NON-RÉCLAMÉ
+          description: PIC
+          produit: 7500/5520/5500/X58 I/O Hub GPIO and Scratch Pad Registers
+          fabriquant: Intel Corporation
+          identifiant matériel: 14.1
+          information bus: pci@0000:40:14.1
+          version: 13
+          bits: 32 bits
+          horloge: 33MHz
+          fonctionnalités: 8259 cap_list
+          configuration: latency=0
+     *-generic:6 NON-RÉCLAMÉ
+          description: PIC
+          produit: 7500/5520/5500/X58 I/O Hub Control Status and RAS Registers
+          fabriquant: Intel Corporation
+          identifiant matériel: 14.2
+          information bus: pci@0000:40:14.2
+          version: 13
+          bits: 32 bits
+          horloge: 33MHz
+          fonctionnalités: 8259 cap_list
+          configuration: latency=0
+     *-generic:7 NON-RÉCLAMÉ
+          description: PIC
+          produit: 7500/5520/5500/X58 Trusted Execution Technology Registers
+          fabriquant: Intel Corporation
+          identifiant matériel: 15
+          information bus: pci@0000:40:15.0
+          version: 13
+          bits: 32 bits
+          horloge: 33MHz
+          fonctionnalités: io_x_-apic
+          configuration: latency=0
+     *-pci:4
+          description: Host bridge
+          produit: Xeon 5600 Series QuickPath Architecture Generic Non-core Registers
+          fabriquant: Intel Corporation
+          identifiant matériel: 101
+          information bus: pci@0000:7e:00.0
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:5
+          description: Host bridge
+          produit: Xeon 5600 Series QuickPath Architecture System Address Decoder
+          fabriquant: Intel Corporation
+          identifiant matériel: 102
+          information bus: pci@0000:7e:00.1
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:6
+          description: Host bridge
+          produit: Xeon 5600 Series QPI Link 0
+          fabriquant: Intel Corporation
+          identifiant matériel: 103
+          information bus: pci@0000:7e:02.0
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:7
+          description: Host bridge
+          produit: Xeon 5600 Series QPI Physical 0
+          fabriquant: Intel Corporation
+          identifiant matériel: 104
+          information bus: pci@0000:7e:02.1
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:8
+          description: Host bridge
+          produit: Xeon 5600 Series Mirror Port Link 0
+          fabriquant: Intel Corporation
+          identifiant matériel: 105
+          information bus: pci@0000:7e:02.2
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:9
+          description: Host bridge
+          produit: Xeon 5600 Series Mirror Port Link 1
+          fabriquant: Intel Corporation
+          identifiant matériel: 106
+          information bus: pci@0000:7e:02.3
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:10
+          description: Host bridge
+          produit: Xeon 5600 Series QPI Link 1
+          fabriquant: Intel Corporation
+          identifiant matériel: 107
+          information bus: pci@0000:7e:02.4
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:11
+          description: Host bridge
+          produit: Xeon 5600 Series QPI Physical 1
+          fabriquant: Intel Corporation
+          identifiant matériel: 108
+          information bus: pci@0000:7e:02.5
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:12
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Registers
+          fabriquant: Intel Corporation
+          identifiant matériel: 109
+          information bus: pci@0000:7e:03.0
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:13
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Target Address Decoder
+          fabriquant: Intel Corporation
+          identifiant matériel: 10a
+          information bus: pci@0000:7e:03.1
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:14
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller RAS Registers
+          fabriquant: Intel Corporation
+          identifiant matériel: 10b
+          information bus: pci@0000:7e:03.2
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:15
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Test Registers
+          fabriquant: Intel Corporation
+          identifiant matériel: 10c
+          information bus: pci@0000:7e:03.4
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:16
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Channel 0 Control
+          fabriquant: Intel Corporation
+          identifiant matériel: 10d
+          information bus: pci@0000:7e:04.0
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:17
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Channel 0 Address
+          fabriquant: Intel Corporation
+          identifiant matériel: 10e
+          information bus: pci@0000:7e:04.1
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:18
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Channel 0 Rank
+          fabriquant: Intel Corporation
+          identifiant matériel: 10f
+          information bus: pci@0000:7e:04.2
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:19
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Channel 0 Thermal Control
+          fabriquant: Intel Corporation
+          identifiant matériel: 110
+          information bus: pci@0000:7e:04.3
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:20
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Channel 1 Control
+          fabriquant: Intel Corporation
+          identifiant matériel: 111
+          information bus: pci@0000:7e:05.0
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:21
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Channel 1 Address
+          fabriquant: Intel Corporation
+          identifiant matériel: 112
+          information bus: pci@0000:7e:05.1
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:22
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Channel 1 Rank
+          fabriquant: Intel Corporation
+          identifiant matériel: 113
+          information bus: pci@0000:7e:05.2
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:23
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Channel 1 Thermal Control
+          fabriquant: Intel Corporation
+          identifiant matériel: 114
+          information bus: pci@0000:7e:05.3
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:24
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Channel 2 Control
+          fabriquant: Intel Corporation
+          identifiant matériel: 115
+          information bus: pci@0000:7e:06.0
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:25
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Channel 2 Address
+          fabriquant: Intel Corporation
+          identifiant matériel: 116
+          information bus: pci@0000:7e:06.1
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:26
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Channel 2 Rank
+          fabriquant: Intel Corporation
+          identifiant matériel: 117
+          information bus: pci@0000:7e:06.2
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:27
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Channel 2 Thermal Control
+          fabriquant: Intel Corporation
+          identifiant matériel: 118
+          information bus: pci@0000:7e:06.3
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:28
+          description: Host bridge
+          produit: Xeon 5600 Series QuickPath Architecture Generic Non-core Registers
+          fabriquant: Intel Corporation
+          identifiant matériel: 119
+          information bus: pci@0000:7f:00.0
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:29
+          description: Host bridge
+          produit: Xeon 5600 Series QuickPath Architecture System Address Decoder
+          fabriquant: Intel Corporation
+          identifiant matériel: 11a
+          information bus: pci@0000:7f:00.1
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:30
+          description: Host bridge
+          produit: Xeon 5600 Series QPI Link 0
+          fabriquant: Intel Corporation
+          identifiant matériel: 11b
+          information bus: pci@0000:7f:02.0
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:31
+          description: Host bridge
+          produit: Xeon 5600 Series QPI Physical 0
+          fabriquant: Intel Corporation
+          identifiant matériel: 11c
+          information bus: pci@0000:7f:02.1
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:32
+          description: Host bridge
+          produit: Xeon 5600 Series Mirror Port Link 0
+          fabriquant: Intel Corporation
+          identifiant matériel: 11d
+          information bus: pci@0000:7f:02.2
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:33
+          description: Host bridge
+          produit: Xeon 5600 Series Mirror Port Link 1
+          fabriquant: Intel Corporation
+          identifiant matériel: 11e
+          information bus: pci@0000:7f:02.3
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:34
+          description: Host bridge
+          produit: Xeon 5600 Series QPI Link 1
+          fabriquant: Intel Corporation
+          identifiant matériel: 11f
+          information bus: pci@0000:7f:02.4
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:35
+          description: Host bridge
+          produit: Xeon 5600 Series QPI Physical 1
+          fabriquant: Intel Corporation
+          identifiant matériel: 120
+          information bus: pci@0000:7f:02.5
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:36
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Registers
+          fabriquant: Intel Corporation
+          identifiant matériel: 121
+          information bus: pci@0000:7f:03.0
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:37
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Target Address Decoder
+          fabriquant: Intel Corporation
+          identifiant matériel: 122
+          information bus: pci@0000:7f:03.1
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:38
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller RAS Registers
+          fabriquant: Intel Corporation
+          identifiant matériel: 123
+          information bus: pci@0000:7f:03.2
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:39
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Test Registers
+          fabriquant: Intel Corporation
+          identifiant matériel: 124
+          information bus: pci@0000:7f:03.4
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:40
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Channel 0 Control
+          fabriquant: Intel Corporation
+          identifiant matériel: 125
+          information bus: pci@0000:7f:04.0
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:41
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Channel 0 Address
+          fabriquant: Intel Corporation
+          identifiant matériel: 126
+          information bus: pci@0000:7f:04.1
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:42
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Channel 0 Rank
+          fabriquant: Intel Corporation
+          identifiant matériel: 127
+          information bus: pci@0000:7f:04.2
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:43
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Channel 0 Thermal Control
+          fabriquant: Intel Corporation
+          identifiant matériel: 128
+          information bus: pci@0000:7f:04.3
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:44
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Channel 1 Control
+          fabriquant: Intel Corporation
+          identifiant matériel: 129
+          information bus: pci@0000:7f:05.0
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:45
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Channel 1 Address
+          fabriquant: Intel Corporation
+          identifiant matériel: 12a
+          information bus: pci@0000:7f:05.1
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:46
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Channel 1 Rank
+          fabriquant: Intel Corporation
+          identifiant matériel: 12b
+          information bus: pci@0000:7f:05.2
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:47
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Channel 1 Thermal Control
+          fabriquant: Intel Corporation
+          identifiant matériel: 12c
+          information bus: pci@0000:7f:05.3
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:48
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Channel 2 Control
+          fabriquant: Intel Corporation
+          identifiant matériel: 12d
+          information bus: pci@0000:7f:06.0
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:49
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Channel 2 Address
+          fabriquant: Intel Corporation
+          identifiant matériel: 12e
+          information bus: pci@0000:7f:06.1
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:50
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Channel 2 Rank
+          fabriquant: Intel Corporation
+          identifiant matériel: 12f
+          information bus: pci@0000:7f:06.2
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+     *-pci:51
+          description: Host bridge
+          produit: Xeon 5600 Series Integrated Memory Controller Channel 2 Thermal Control
+          fabriquant: Intel Corporation
+          identifiant matériel: 130
+          information bus: pci@0000:7f:06.3
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
