@@ -9,17 +9,18 @@ Y = numpy.empty(sizeX).astype(numpy.float32)
 # C++ reference code
 referenceCode="""
 #line 11 "saxpy.py" // helpful for debug
-void saxpy(int n, float alpha, float *X, float *Y, int numberIterations){
+void saxpy(int n, float alpha, float *X, float *Y)
+{
 	int i;
-	for(int j=0; j< numberIterations;j++){
-		for (i=0; i<n; i++){
-			Y[i] += alpha * X[i];
-		}
-	}
+	for (i=0; i<n; i++)
+		Y[i] += alpha * X[i];
 }
 """
 mainCode="""
-  saxpy(sizeX, 0.001f, X, Y, numberIterations);
+
+for(int j=0; j< numberIterations;j++)
+  saxpy(sizeX, 0.001f, X, Y);
+  
 """
 
 def BenchmarkCode(name, mainCode, saxpyCode,X,Y):
@@ -42,21 +43,24 @@ def BenchmarkCode(name, mainCode, saxpyCode,X,Y):
 	print("execution time for "+name+" code = "+ str(execution_time))
 	return execution_time
 
-referenceTime=BenchmarkCode('Reference', mainCode, referenceCode,X,Y)
 
+referenceTime=BenchmarkCode('Reference', mainCode, referenceCode,X,Y)
+print(Y[0])
 SSECode="""
 #line 49 "saxpy.py" // helpful for debug
-void saxpy(int n, float alpha, float *X, float *Y, int numberIterations)
+void saxpy(int n, float alpha, float *X, float *Y)
 {
 	int i;
 	__m128  a  = _mm_set_ps(alpha,alpha,alpha,alpha);
-	for(int j=0; j< numberIterations;j++){
-		for (i=0; i<n-4; i=i+4){
-				_mm_store_ps(Y+i,_mm_add_ps(_mm_load_ps(Y+i),_mm_mul_ps(a,_mm_load_ps(X+i))));
-			}
+	__m128  mul,add,ld;
+	
+	for (i=0; i<n-4; i=i+4){
+			_mm_store_ps(Y+i,_mm_add_ps(_mm_load_ps(Y+i),_mm_mul_ps(a,_mm_load_ps(X+i))));
+
 		}
 	}
 """
+
 SSETime=BenchmarkCode('SSE', mainCode, SSECode,X,Y)
 
 print("speed up for SSE = " + str(referenceTime/SSETime))

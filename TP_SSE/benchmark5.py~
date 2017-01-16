@@ -11,8 +11,8 @@ referenceCode="""
 #line 11 "saxpy.py" // helpful for debug
 void saxpy(int n, float alpha, float *X, float *Y, int numberIterations){
 	int i;
-	for(int j=0; j< numberIterations;j++){
-		for (i=0; i<n; i++){
+for (i=0; i<n; i++){
+		for(int j=0; j< numberIterations;j++){
 			Y[i] += alpha * X[i];
 		}
 	}
@@ -50,8 +50,9 @@ void saxpy(int n, float alpha, float *X, float *Y, int numberIterations)
 {
 	int i;
 	__m128  a  = _mm_set_ps(alpha,alpha,alpha,alpha);
+			for (i=0; i<n-4; i=i+4){
 	for(int j=0; j< numberIterations;j++){
-		for (i=0; i<n-4; i=i+4){
+
 				_mm_store_ps(Y+i,_mm_add_ps(_mm_load_ps(Y+i),_mm_mul_ps(a,_mm_load_ps(X+i))));
 			}
 		}
